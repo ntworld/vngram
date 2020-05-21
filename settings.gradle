@@ -1,0 +1,2 @@
+rootProject.name='vngram'
+include ':app'
