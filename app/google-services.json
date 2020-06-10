@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "28849965588",
+    "firebase_url": "https://vngram-4c14b.firebaseio.com",
+    "project_id": "vngram-4c14b",
+    "storage_bucket": "vngram-4c14b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:28849965588:android:c0d40f0047ddaa5b61f501",
+        "android_client_info": {
+          "package_name": "com.example.vngram"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "28849965588-9lgqj4299b8jrlc2ram5v0rfakt7lmj1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.vngram",
+            "certificate_hash": "335fe02d24ac8487e077ab3a08875c0380d53049"
+          }
+        },
+        {
+          "client_id": "28849965588-7im2ha8dpg4nd922evrl6a9shj2fscdv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBD86ECgfnkZdTGBrTdKaM4v4vGfpIR7U4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "28849965588-7im2ha8dpg4nd922evrl6a9shj2fscdv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
