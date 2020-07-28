@@ -18,9 +18,9 @@ import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {
 
-    private var auth : FirebaseAuth? = null
-    private var googleSignInClient : GoogleSignInClient? = null
-    private var GOOGLE_LOGIN_CODE = 9001
+    var auth : FirebaseAuth? = null
+    var googleSignInClient : GoogleSignInClient? = null
+    var GOOGLE_LOGIN_CODE = 9001
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
