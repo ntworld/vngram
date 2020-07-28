@@ -18,9 +18,9 @@ import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {
 
-    var auth : FirebaseAuth? = null
-    var googleSignInClient : GoogleSignInClient? = null
-    var GOOGLE_LOGIN_CODE = 9001
+    private var auth : FirebaseAuth? = null
+    private var googleSignInClient : GoogleSignInClient? = null
+    private var GOOGLE_LOGIN_CODE = 9001
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,7 +30,7 @@ class LoginActivity : AppCompatActivity() {
 
         // 구글 인증 옵션
         // 토큰, 이메일 필요
-        var gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(getString(R.string.default_web_client_id))
             .requestEmail()
             .build()
@@ -58,8 +58,8 @@ class LoginActivity : AppCompatActivity() {
     }
 
     // 구글 로그인
-    fun googleLogin() {
-        var signInIntent = googleSignInClient?.signInIntent
+    private fun googleLogin() {
+        val signInIntent = googleSignInClient?.signInIntent
         startActivityForResult(signInIntent, GOOGLE_LOGIN_CODE)
     }
 
@@ -67,11 +67,11 @@ class LoginActivity : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == GOOGLE_LOGIN_CODE) {
-            var result = Auth.GoogleSignInApi.getSignInResultFromIntent(data)
+            val result = Auth.GoogleSignInApi.getSignInResultFromIntent(data)
 
             // 개같은곳
             if (result!!.isSuccess) {
-                var account = result.signInAccount
+                val account = result.signInAccount
                 firebaseAuthWithGoogle(account!!)
             } else {
                 progress_bar.visibility = View.GONE
@@ -80,8 +80,8 @@ class LoginActivity : AppCompatActivity() {
     }
 
     // 파이어배이스 권한 및 구글
-    fun firebaseAuthWithGoogle (account: GoogleSignInAccount) {
-        var credential = GoogleAuthProvider.getCredential(account.idToken, null)
+    private fun firebaseAuthWithGoogle (account: GoogleSignInAccount) {
+        val credential = GoogleAuthProvider.getCredential(account.idToken, null)
         auth?.signInWithCredential(credential)
             ?.addOnCompleteListener {
                 task ->
@@ -91,13 +91,13 @@ class LoginActivity : AppCompatActivity() {
                         task.isSuccessful -> moveMainPage(auth?.currentUser)
 
                         // 로그인 에러 메세지
-                        else -> Toast.makeText(this, task.exception!!.message, Toast.LENGTH_LONG).show();
+                        else -> Toast.makeText(this, task.exception!!.message, Toast.LENGTH_LONG).show()
                     }
             }
     }
 
     // 로그인 및 회원가입
-    fun signinAndSignup() {
+    private fun signinAndSignup() {
         auth?.createUserWithEmailAndPassword(email_edittext.text.toString(), password_edittext.text.toString())
             ?.addOnCompleteListener {
                 task ->
@@ -112,7 +112,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     // 이메일로 로그인
-    fun signinEmail() {
+    private fun signinEmail() {
         auth?.signInWithEmailAndPassword(email_edittext.text.toString(), password_edittext.text.toString())
             ?.addOnCompleteListener {
                 task ->
@@ -121,13 +121,13 @@ class LoginActivity : AppCompatActivity() {
                         task.isSuccessful -> moveMainPage(auth?.currentUser)
 
                         // 로그인 에러 메세지
-                        else -> Toast.makeText(this, task.exception!!.message, Toast.LENGTH_LONG).show();
+                        else -> Toast.makeText(this, task.exception!!.message, Toast.LENGTH_LONG).show()
                     }
             }
     }
 
     // 메인페이지로 이동
-    fun moveMainPage(user: FirebaseUser?) {
+    private fun moveMainPage(user: FirebaseUser?) {
         if (user != null) {
             startActivity(Intent(this, MainActivity::class.java))
         }

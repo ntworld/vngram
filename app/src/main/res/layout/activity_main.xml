@@ -37,7 +37,6 @@
                 android:layout_centerVertical="true"
                 android:layout_toEndOf="@+id/toolbar_btn_back"
                 android:gravity="center"
-                android:textColor="16sp"
                 android:visibility="gone" />
         </RelativeLayout>
     </androidx.appcompat.widget.Toolbar>
@@ -63,7 +62,7 @@
     <FrameLayout
         android:id="@+id/main_content"
         android:layout_below="@+id/toolbar_division"
-        android:layout_above="@+id/nav_division"
+        android:layout_above="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
     </FrameLayout>
