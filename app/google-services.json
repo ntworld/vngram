@@ -23,6 +23,14 @@
           }
         },
         {
+          "client_id": "28849965588-9lgqj4299b8jrlc2ram5v0rfakt7lmj1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.vngram",
+            "certificate_hash": "335fe02d24ac8487e077ab3a08875c0380d53049"
+          }
+        },
+        {
           "client_id": "28849965588-7im2ha8dpg4nd922evrl6a9shj2fscdv.apps.googleusercontent.com",
           "client_type": 3
         }
