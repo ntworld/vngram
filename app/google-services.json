@@ -8,18 +8,18 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:28849965588:android:c0d40f0047ddaa5b61f501",
+        "mobilesdk_app_id": "1:28849965588:android:61fef76205e55a5461f501",
         "android_client_info": {
           "package_name": "com.example.vngram"
         }
       },
       "oauth_client": [
         {
-          "client_id": "28849965588-9lgqj4299b8jrlc2ram5v0rfakt7lmj1.apps.googleusercontent.com",
+          "client_id": "28849965588-8mc7lvjfquedg67hpbhc8gtnobph2g4c.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.vngram",
-            "certificate_hash": "335fe02d24ac8487e077ab3a08875c0380d53049"
+            "certificate_hash": "176325ddd4b29fe81ef45051e7bfc1e205c44945"
           }
         },
         {
