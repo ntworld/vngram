@@ -23,28 +23,28 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.core:core-ktx:1.3.0'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
 
     //트위터 라이브러리
     implementation 'com.twitter.sdk.android:twitter:3.1.1'
 
-    // 파이어베이스
-    implementation 'com.google.firebase:firebase-auth:19.3.1'
-
-    // test 라이브러리
+    implementation 'com.google.firebase:firebase-auth:19.3.2'
     testImplementation 'junit:junit:4.13'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
     //Material Design
-    implementation 'com.google.android.material:material:1.2.0-beta01'
+    implementation 'com.google.android.material:material:1.3.0-alpha01'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.legacy:legacy-support-core-utils:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.core:core-ktx:1.3.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+
+    // google
+    implementation 'com.google.android.gms:play-services-auth:18.1.0'
 }
